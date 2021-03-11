@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tourist.Common;
 using Tourist.Service;
 using Tourist.View;
+using Unity;
 
 namespace Tourist.Presenter
 {
-    public class LoginPresenter
+    public class LoginPresenter : BasePresener<ILoginForm>
     {
-        private readonly ILoginForm loginForm;
         private readonly IService service;
         
-        public LoginPresenter(ILoginForm loginForm, IService service)
+        public LoginPresenter(ApplicationController controller, ILoginForm loginForm, IService service)
+            : base(controller, loginForm)
         {
-            this.loginForm = loginForm;
             this.service = service;
 
             loginForm.LoginIn += () => LoginIn();
@@ -23,13 +24,14 @@ namespace Tourist.Presenter
 
         private void LoginIn()
         {
-            if (!service.LogIn(loginForm.Login, loginForm.Password))
+            if (!service.LogIn(view.Login, view.Password))
             {
-                loginForm.ShowError("Не успешная авторизация");
+                view.ShowError("Ошибка авторизации");
             }
             else
             {
-                loginForm.ShowError("Авторизация прошла успешно");
+                controller.Run<MainPresenter, User>(new User() { Login = view.Login, Password = view.Password });
+                view.Close();
             }
         }
     }

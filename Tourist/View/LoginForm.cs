@@ -10,22 +10,26 @@ using System.Windows.Forms;
 
 namespace Tourist.View
 {
-    public partial class LoginForm : Form, IView, ILoginForm
+    public partial class LoginForm : Form, ILoginForm
     {
+        private readonly ApplicationContext context;
+
+        public LoginForm(ApplicationContext context)
+        {
+            InitializeComponent();
+            this.context = context;
+        }        
+
         public new void Show()
         {
-            base.Show();
+            context.MainForm = this;
+            Application.Run(context);
         }
         
         public new void Close()
         {
             base.Close();
-        }
-
-        public LoginForm()
-        {
-            InitializeComponent();
-        }
+        }        
 
         public string Login { get => textBox1.Text; }
         public string Password { get => textBox2.Text; }
@@ -34,7 +38,7 @@ namespace Tourist.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
