@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c1f1512480384baeabe6f26fd6dd591a" Name="Diagram1" ZoomLevel="127">
+      <Diagram DiagramId="c1f1512480384baeabe6f26fd6dd591a" Name="Diagram1" ZoomLevel="82">
         <EntityTypeShape EntityType="bustravelModel.Bus" Width="1.5" PointX="0.5" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="bustravelModel.Category" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="bustravelModel.Group" Width="1.5" PointX="5.125" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="bustravelModel.Point" Width="1.5" PointX="5" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="bustravelModel.Rout" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="bustravelModel.Service" Width="1.5" PointX="0.625" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="bustravelModel.Service" Width="1.5" PointX="0.5" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="bustravelModel.Tour" Width="1.5" PointX="2.875" PointY="5.625" IsExpanded="true" />
         <AssociationConnector Association="bustravelModel.Bus_Rout" ManuallyRouted="false" />
         <AssociationConnector Association="bustravelModel.Category_Bus" ManuallyRouted="false" />

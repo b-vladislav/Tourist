@@ -70,6 +70,7 @@
     <Compile Include="Common\ApplicationController.cs" />
     <Compile Include="Common\BasePresenter.cs" />
     <Compile Include="Common\IPresenter.cs" />
+    <Compile Include="Presenter\BusPresenter.cs" />
     <Compile Include="Presenter\LoginPresenter.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="Service\Bus.cs">
@@ -78,11 +79,20 @@
     <Compile Include="Service\Category.cs">
       <DependentUpon>tourdb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Service\Helper.cs" />
     <Compile Include="Service\IService.cs" />
+    <Compile Include="Service\ObservableListSource.cs" />
     <Compile Include="Service\Services.cs" />
     <Compile Include="Service\User.cs">
       <DependentUpon>tourdb.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\BusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BusForm.Designer.cs">
+      <DependentUpon>BusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\IBusForm.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +140,9 @@
     <Compile Include="View\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\BusForm.resx">
+      <DependentUpon>BusForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +159,13 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Tourist.Service_1.Bus.datasource" />
+    <None Include="Properties\DataSources\Tourist.Service_1.Category.datasource" />
+    <None Include="Properties\DataSources\Tourist.Service_1.Point.datasource" />
+    <None Include="Properties\DataSources\Tourist.Service_1.Rout.datasource" />
+    <None Include="Properties\DataSources\Tourist.Service_1.Service.datasource" />
+    <None Include="Properties\DataSources\Tourist.Service_1.Tour.datasource" />
+    <None Include="Properties\DataSources\Tourist.Service_1.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

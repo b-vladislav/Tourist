@@ -17,7 +17,7 @@ namespace Tourist.Service
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tour()
         {
-            this.Rout = new HashSet<Rout>();
+            this.Rout = new ObservableListSource<Rout>();
         }
     
         public int tour_id { get; set; }
@@ -27,6 +27,6 @@ namespace Tourist.Service
     
         public virtual Group Group { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rout> Rout { get; set; }
+        public virtual ObservableListSource<Rout> Rout { get; set; }
     }
 }

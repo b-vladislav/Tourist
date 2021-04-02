@@ -17,7 +17,7 @@ namespace Tourist.Service
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Service()
         {
-            this.Bus = new HashSet<Bus>();
+            this.Bus = new ObservableListSource<Bus>();
         }
     
         public int service_id { get; set; }
@@ -25,6 +25,6 @@ namespace Tourist.Service
         public int min_time { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Bus> Bus { get; set; }
+        public virtual ObservableListSource<Bus> Bus { get; set; }
     }
 }

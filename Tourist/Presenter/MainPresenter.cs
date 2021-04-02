@@ -19,6 +19,12 @@ namespace Tourist.Presenter
             : base(controller, mainForm)
         {
             this.service = service;
+            view.ShowBus += View_ShowBus;
+        }
+
+        private void View_ShowBus(object sender, EventArgs e)
+        {
+            controller.Run<BusPresenter>();
         }
 
         public override void Run(User argument)
@@ -32,5 +38,7 @@ namespace Tourist.Presenter
         {
             view.SetUserName(user.Login);
         }
+
+
     }
 }

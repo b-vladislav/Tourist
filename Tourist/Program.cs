@@ -27,6 +27,7 @@ namespace Tourist
             controller.RegisterService<IService, Services>();
             controller.RegisterView<ILoginForm, LoginForm>();
             controller.RegisterView<IMainForm, MainForm>();
+            controller.RegisterView<IBusForm, BusForm>();
 
             controller.Run<LoginPresenter>();
         }

@@ -10,5 +10,7 @@ namespace Tourist.View
     public interface IMainForm : IView
     {
         void SetUserName(string UserName);
+
+        event EventHandler ShowBus;
     }
 }

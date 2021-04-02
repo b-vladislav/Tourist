@@ -17,7 +17,7 @@ namespace Tourist.Service
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()
         {
-            this.Bus = new HashSet<Bus>();
+            this.Bus = new ObservableListSource<Bus>();
         }
     
         public int category_id { get; set; }
@@ -25,6 +25,6 @@ namespace Tourist.Service
         public double price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Bus> Bus { get; set; }
+        public virtual ObservableListSource<Bus> Bus { get; set; }
     }
 }

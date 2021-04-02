@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.автобусыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сервисыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пунктыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.автобусыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пунктыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сервисыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +51,12 @@
             this.statusStrip1.Size = new System.Drawing.Size(822, 25);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // menuStrip1
             // 
@@ -75,6 +81,25 @@
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.справочникиToolStripMenuItem.Text = "Справочники";
             // 
+            // автобусыToolStripMenuItem
+            // 
+            this.автобусыToolStripMenuItem.Name = "автобусыToolStripMenuItem";
+            this.автобусыToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.автобусыToolStripMenuItem.Text = "Автобусы";
+            this.автобусыToolStripMenuItem.Click += new System.EventHandler(this.busMenuItem_Click);
+            // 
+            // сервисыToolStripMenuItem
+            // 
+            this.сервисыToolStripMenuItem.Name = "сервисыToolStripMenuItem";
+            this.сервисыToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.сервисыToolStripMenuItem.Text = "Сервисы";
+            // 
+            // пунктыToolStripMenuItem
+            // 
+            this.пунктыToolStripMenuItem.Name = "пунктыToolStripMenuItem";
+            this.пунктыToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.пунктыToolStripMenuItem.Text = "Пункты";
+            // 
             // отчетыToolStripMenuItem
             // 
             this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
@@ -86,30 +111,6 @@
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.выходToolStripMenuItem.Text = "Выход";
-            // 
-            // автобусыToolStripMenuItem
-            // 
-            this.автобусыToolStripMenuItem.Name = "автобусыToolStripMenuItem";
-            this.автобусыToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.автобусыToolStripMenuItem.Text = "Автобусы";
-            // 
-            // пунктыToolStripMenuItem
-            // 
-            this.пунктыToolStripMenuItem.Name = "пунктыToolStripMenuItem";
-            this.пунктыToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.пунктыToolStripMenuItem.Text = "Пункты";
-            // 
-            // сервисыToolStripMenuItem
-            // 
-            this.сервисыToolStripMenuItem.Name = "сервисыToolStripMenuItem";
-            this.сервисыToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.сервисыToolStripMenuItem.Text = "Сервисы";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // MainForm
             // 

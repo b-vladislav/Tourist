@@ -17,8 +17,8 @@ namespace Tourist.Service
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Bus()
         {
-            this.Rout = new HashSet<Rout>();
-            this.Service = new HashSet<Service>();
+            this.Rout = new ObservableListSource<Rout>();
+            this.Service = new ObservableListSource<Service>();
         }
     
         public int bus_id { get; set; }
@@ -26,9 +26,9 @@ namespace Tourist.Service
         public string number { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rout> Rout { get; set; }
+        public virtual ObservableListSource<Rout> Rout { get; set; }
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Service> Service { get; set; }
+        public virtual ObservableListSource<Service> Service { get; set; }
     }
 }

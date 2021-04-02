@@ -14,12 +14,13 @@ namespace Tourist
     public partial class MainForm : Form, IMainForm
     {
         private readonly ApplicationContext context;
+        public event EventHandler ShowBus;
 
         public MainForm(ApplicationContext context)
         {
             this.context = context;
             InitializeComponent();
-        }
+        }       
 
         public void SetUserName(string UserName)
         {
@@ -30,6 +31,11 @@ namespace Tourist
         {
             context.MainForm = this;
             base.Show();
+        }
+
+        private void busMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowBus?.Invoke(this, e);
         }
     }
 }
